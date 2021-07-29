@@ -1,6 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
+import ContactModal from './ContactModal';
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+  const [showContact, setShowContact] = useState(false);
+
+  const handleShow = () => {
+    setShow(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleShowContact = () => {
+    setShowContact(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleClose = () => {
+    if (document.body.style.overflow === 'hidden') {
+      document.body.style.overflow = 'auto';
+    }
+    setShow(false);
+  };
+  const handleCloseContact = () => {
+    if (document.body.style.overflow === 'hidden') {
+      document.body.style.overflow = 'auto';
+    }
+    setShowContact(false);
+  };
   return (
     <header className="site-header site-header-menu--right">
       <div className="container-fluid pr-lg--30 pl-lg--30">
@@ -23,20 +50,20 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
-                    className="nav-link gr-text-color font-weight-bold modal-trigger gr-text-11 portolio-modal-trigger"
-                    href="#portfolio-modal"
+                  <span
+                    className="nav-link gr-text-color font-weight-bold modal-trigger gr-text-11 cursor portolio-modal-trigger"
+                    onClick={handleShow}
                   >
                     about me.
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
-                  <a
+                  <span
                     className="nav-link gr-text-color font-weight-bold modal-trigger gr-text-11 contact-modal-trigger"
-                    href="#contact-modal"
+                    onClick={handleShowContact}
                   >
                     contact.
-                  </a>
+                  </span>
                 </li>
                 <li className="nav-item">
                   <a
@@ -77,6 +104,8 @@ const Header = () => {
           </button>
         </nav>
       </div>
+      <Modal show={show} close={handleClose} />
+      <ContactModal show={showContact} close={handleCloseContact} />
     </header>
   );
 };
