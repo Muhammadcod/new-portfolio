@@ -9,6 +9,15 @@ export default {
       type: 'string'
     },
     {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96
+      }
+    },
+    {
       name: 'type',
       title: 'Project Type',
       type: 'string'
@@ -55,5 +64,11 @@ export default {
       name: 'dateCreated',
       type: 'date'
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'project.name',
+      name: 'project.name'
+    }
+  }
 };

@@ -1,7 +1,9 @@
 import React from 'react';
 import { urlFor } from '../lib/sanity';
+import Link from 'next/link';
 
 const Projects = ({ projects }) => {
+  console.log(projects, '...');
   return (
     <div
       className="portfolio-section gr-pt-lg-15 gr-pt-7"
@@ -33,12 +35,12 @@ const Projects = ({ projects }) => {
                           UI Design
                         </span>
                         <h3 className="gr-text-6 font-weight-bold">
-                          <a
-                            href="portfolio-details.html"
+                          <Link
+                            href={`/projects/${project.slug.current}`}
                             className="gr-heading-color"
                           >
                             {project.name}
-                          </a>
+                          </Link>
                         </h3>
                       </div>
                     </div>

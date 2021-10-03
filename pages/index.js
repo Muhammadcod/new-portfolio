@@ -7,6 +7,7 @@ const projectsQuery = `*[_type == 'project']{
   _id,
   name,
   demo,
+  slug,
   dateCreated,
   description,
   image,
@@ -15,7 +16,7 @@ const projectsQuery = `*[_type == 'project']{
   technology
 }`;
 
-export default function Home({ projects }) {
+export default function Index({ projects }) {
   return (
     <>
       <div className="hero-section ">
@@ -36,7 +37,7 @@ export default function Home({ projects }) {
                   Hi, I am Muhammad Adebayo
                 </span>
                 <h2 className="gr-text-2 font-weight-bold">
-                  Frontend Developer <br /> who loves to code!
+                  Frontend Developer <br /> based in lagos.
                 </h2>
               </div>
             </div>
@@ -54,21 +55,21 @@ export default function Home({ projects }) {
                 I am taking new projects. Waiting to hearing about new projects,
                 so if you'd like to chat please get in touch.
               </h2>
-              <ul className="llinks-inline d-flex flex-wrap justify-content-center gr-pt-md-11 gr-pt-10 pl-0">
+              <ul className="links-inline d-flex flex-wrap justify-content-center gr-pt-md-11 gr-pt-10 pl-0">
                 <li className="text-uppercase border-right-sm font-weight-bold gr-text-12 letter-spacing-1_63">
                   <a
-                    href=""
+                    href="mailto:adebayomuhammad47@gmail.com"
                     className="gr-px-7  d-inline-block btn-hover-translate"
                   >
-                    <span>adebayomuhammad47@gmail.com</span>
+                    <span>Email</span>
                   </a>
                 </li>
                 <li className="text-uppercase font-weight-bold gr-text-12 letter-spacing-1_63">
                   <a
-                    href=""
+                    href="https://www.linkedin.com/in/adebayo-mohammed"
                     className="gr-px-7 d-inline-block btn-hover-translate"
                   >
-                    <span>https://www.linkedin.com/in/adebayo-mohammed</span>
+                    <span>Linkedin</span>
                   </a>
                 </li>
               </ul>
