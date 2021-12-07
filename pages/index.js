@@ -1,7 +1,5 @@
-import Head from 'next/head';
 import Projects from '../components/Projects';
 import { sanityClient, urlFor } from '../lib/sanity';
-import Modal from '../components/Modal';
 
 const projectsQuery = `*[_type == 'project']{
   _id,
