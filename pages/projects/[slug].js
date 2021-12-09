@@ -1,10 +1,6 @@
-import {
-  sanityClient,
-  urlFor,
-  usePreviewSubscription,
-  PortableText
-} from '../../lib/sanity';
+import { sanityClient, urlFor, usePreviewSubscription, PortableText } from '../../lib/sanity';
 import { useRouter } from 'next/router';
+import DynamicComponent from '../../components/DynamicComponent';
 
 const projectQuery = `*[_type == 'project' && slug.current == $slug][0] {
  _id,
@@ -30,13 +26,7 @@ export default function OneProject({ data, preview }) {
     initialData: data,
     enabled: preview
   });
-
-  console.log(project.name);
-  return (
-    <article>
-      <h1>{project.project.name}</h1>
-    </article>
-  );
+  return <DynamicComponent projectDetails={project.project} />;
 }
 
 export async function getStaticPaths() {

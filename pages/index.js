@@ -26,10 +26,7 @@ export default function Index({ projects }) {
             <div className="col-lg-12">
               <div className="hero-content text-center portfolio-card-hover">
                 <div className="gr-pb-10">
-                  <img
-                    src="/AvatarMaker.png"
-                    className="card-image rounded-pill"
-                  />
+                  <img src="/AvatarMaker.png" className="card-image rounded-pill" />
                 </div>
                 <span className="gr-text-10 font-weight-bold text-uppercase gr-pb-8 d-inline-block letter-spacings-1">
                   Hi, I am Muhammad Adebayo
@@ -50,23 +47,21 @@ export default function Index({ projects }) {
           <div className="row justify-content-center">
             <div className="col-xl-10 col-lg-11 text-center">
               <h2 className="gr-text-3 font-weight-bold gr-px-xl-7">
-                I am taking new projects. Waiting to hearing about new projects,
-                so if you'd like to chat please get in touch.
+                I am taking new projects. Waiting to hearing about new projects, so if you'd like to
+                chat please get in touch.
               </h2>
               <ul className="links-inline d-flex flex-wrap justify-content-center gr-pt-md-11 gr-pt-10 pl-0">
                 <li className="text-uppercase border-right-sm font-weight-bold gr-text-12 letter-spacing-1_63">
                   <a
                     href="mailto:adebayomuhammad47@gmail.com"
-                    className="gr-px-7  d-inline-block btn-hover-translate"
-                  >
+                    className="gr-px-7  d-inline-block btn-hover-translate">
                     <span>Email</span>
                   </a>
                 </li>
                 <li className="text-uppercase font-weight-bold gr-text-12 letter-spacing-1_63">
                   <a
                     href="https://www.linkedin.com/in/adebayo-mohammed"
-                    className="gr-px-7 d-inline-block btn-hover-translate"
-                  >
+                    className="gr-px-7 d-inline-block btn-hover-translate">
                     <span>Linkedin</span>
                   </a>
                 </li>
