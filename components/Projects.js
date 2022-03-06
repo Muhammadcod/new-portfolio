@@ -60,9 +60,16 @@ const Projects = ({ projects }) => {
             </div>
           </div>
           <div className="col-12 text-center">
-            <a href="" className="btn btn-outline rounded-pill gr-text-12 gr-btn-border">
+
+            <Link
+                href={`/projects`}
+                className="btn btn-outline rounded-pill gr-text-12 gr-btn-border">
+              All works
+            </Link>
+            <a href="/projects" className="btn btn-outline rounded-pill gr-text-12 gr-btn-border">
               All works
             </a>
+
           </div>
         </div>
       </div>

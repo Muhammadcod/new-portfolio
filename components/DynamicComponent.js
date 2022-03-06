@@ -3,8 +3,8 @@ import { urlFor } from '../lib/sanity';
 import PortableText from 'react-portable-text';
 
 const DynamicComponent = ({ projectDetails }) => {
-  const { demo, image, name, dateCreated, technology, description } = projectDetails;
-
+  const { demo, image, name, dateCreated, technology, description , story} = projectDetails;
+console.log(projectDetails)
   return (
     <main>
       <div className="site-wrapper overflow-hidden position-relative">
@@ -22,10 +22,10 @@ const DynamicComponent = ({ projectDetails }) => {
               <div className="col-xl-9 col-lg-10 col-md-12">
                 <div className="texts gr-pr-xl-13">
                   <span className="d-block text-uppercase gr-text-12 font-weight-bold gr-pb-6 gr-heading-color-opacity">
-                    Branding
+                    Project
                   </span>
                   <h2 className="gr-text-3 font-weight-bold gr-pb-6">
-                    Adaptable but Identifiable Product for Kandinsky.
+                    {name}
                   </h2>
                   <p className="gr-text-9 gr-text-color-opacity">
                     <PortableText
@@ -61,7 +61,7 @@ const DynamicComponent = ({ projectDetails }) => {
                       <a
                         href={demo}
                         className="btn btn-primary rounded-pill with-icon btn-hover-translate btn-hover-shadow-down">
-                        Live work <i className="icon icon-tail-right"></i>
+                        Live work <i className="icon icon-tail-right"/>
                       </a>
                     </div>
                   </div>
@@ -81,6 +81,23 @@ const DynamicComponent = ({ projectDetails }) => {
                     </div>
                   </div>
                 </div>
+
+                {story && (<div className="texts gr-pr-xl-13">
+                  <h2 className="gr-text-3 font-weight-bold gr-pb-6">
+                    Story
+                  </h2>
+                  <p className="gr-text-9 gr-text-color-opacity">
+                    <PortableText
+                        content={story}
+                        serializers={{
+                          h1: (props) => <h1 style={{color: 'red'}} {...props} />,
+                          li: ({children}) => <li className="special-list-item">{children}</li>,
+                          someCustomType: DynamicComponent
+                        }}
+                        className=""
+                    />
+                  </p>
+                </div>)}
               </div>
             </div>
           </div>

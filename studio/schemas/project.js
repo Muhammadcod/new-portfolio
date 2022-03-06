@@ -44,6 +44,19 @@ export default {
       ]
     },
     {
+      title: 'Story',
+      name: 'story',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: []
+        }
+      ]
+    },
+    {
       name: 'github',
       title: 'Github Link',
       type: 'string'

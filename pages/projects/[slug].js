@@ -1,4 +1,4 @@
-import { sanityClient, urlFor, usePreviewSubscription, PortableText } from '../../lib/sanity';
+import { sanityClient, usePreviewSubscription, PortableText } from '../../lib/sanity';
 import { useRouter } from 'next/router';
 import DynamicComponent from '../../components/DynamicComponent';
 
@@ -12,7 +12,8 @@ const projectQuery = `*[_type == 'project' && slug.current == $slug][0] {
   image,
   type,
   github,
-  technology
+  technology,
+  story
 }`;
 
 export default function OneProject({ data, preview }) {
