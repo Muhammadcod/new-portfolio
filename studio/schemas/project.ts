@@ -38,7 +38,7 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
+          styles: [{title: 'Normal', value: 'normal'}],
           lists: []
         }
       ]
@@ -51,7 +51,7 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
+          styles: [{title: 'Normal', value: 'normal'}],
           lists: []
         }
       ]
@@ -70,7 +70,7 @@ export default {
       name: 'technology',
       title: 'Technology',
       type: 'array',
-      of: [{ type: 'string' }]
+      of: [{type: 'string'}]
     },
     {
       title: 'DateCreated',

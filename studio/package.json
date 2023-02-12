@@ -2,28 +2,36 @@
   "name": "portfolio",
   "private": true,
   "version": "1.0.0",
-  "description": "",
   "main": "package.json",
-  "author": "Mohammed Adebayo <adebayomuhammad47@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
+    "dev": "sanity dev",
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.11.1",
-    "@sanity/components": "^2.2.6",
-    "@sanity/core": "^2.11.0",
-    "@sanity/default-layout": "^2.11.1",
-    "@sanity/default-login": "^2.11.1",
-    "@sanity/desk-tool": "^2.11.1",
-    "@sanity/vision": "^2.11.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0"
+    "@sanity/vision": "^3.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "sanity": "^3.0.0",
+    "styled-components": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^2.0.1",
+    "eslint": "^8.6.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  }
 }
