@@ -6,7 +6,7 @@ export default {
     {
       name: 'name',
       title: 'Project Name',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'slug',
@@ -14,21 +14,26 @@ export default {
       type: 'slug',
       options: {
         source: 'name',
-        maxLength: 96
-      }
+        maxLength: 96,
+      },
+    },
+    {
+      name: 'shorts',
+      title: 'Short Description',
+      type: 'string',
     },
     {
       name: 'type',
       title: 'Project Type',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'image',
       title: 'Image',
       type: 'image',
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
       title: 'Description',
@@ -39,9 +44,9 @@ export default {
           title: 'Block',
           type: 'block',
           styles: [{title: 'Normal', value: 'normal'}],
-          lists: []
-        }
-      ]
+          lists: [],
+        },
+      ],
     },
     {
       title: 'Story',
@@ -52,36 +57,36 @@ export default {
           title: 'Block',
           type: 'block',
           styles: [{title: 'Normal', value: 'normal'}],
-          lists: []
-        }
-      ]
+          lists: [],
+        },
+      ],
     },
     {
       name: 'github',
       title: 'Github Link',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'demo',
       title: 'Demo Link',
-      type: 'string'
+      type: 'string',
     },
     {
       name: 'technology',
       title: 'Technology',
       type: 'array',
-      of: [{type: 'string'}]
+      of: [{type: 'string'}],
     },
     {
       title: 'DateCreated',
       name: 'dateCreated',
-      type: 'date'
-    }
+      type: 'date',
+    },
   ],
   preview: {
     select: {
       title: 'project.name',
-      name: 'project.name'
-    }
-  }
-};
+      name: 'project.name',
+    },
+  },
+}

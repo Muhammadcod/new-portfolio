@@ -22,7 +22,6 @@ const item = {
 };
 
 const ProjectsContainer = ({ projects }) => {
-  console.log(projects);
   return (
     <div className="px-5 pt-5">
       <motion.div
@@ -31,8 +30,8 @@ const ProjectsContainer = ({ projects }) => {
         animate="visible"
         className="row g-3"
         data-masonry='{"percentPosition": true }'>
-        {projects.slice(1, 7).map((project, i) => (
-          <ProjectCard variants={item} item={project} i={i} key={i} />
+        {projects.map((project, i) => (
+          <ProjectCard variants={item} item={project} i={i} key={`${i}${project.name}`} />
         ))}
       </motion.div>
     </div>
