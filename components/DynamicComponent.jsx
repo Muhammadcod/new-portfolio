@@ -28,22 +28,24 @@ const DynamicComponent = ({ project = {} }) => {
 
         <section className="container-fluid gr-pl-lg-10 gr-pr-lg-10">
           <div className="col-xl-12 col-lg-10 col-md-12">
-            <div className="texts gr-pr-xl-13">
-              <span className="d-block text-uppercase gr-text-12 font-weight-bold gr-pb-6 gr-heading-color-opacity">
-                Description
-              </span>
-              <div className="gr-text-9 gr-text-color-opacity">
-                <PortableText
-                  content={description}
-                  serializers={{
-                    h1: (props) => <h1 style={{ color: 'red' }} {...props} />,
-                    li: ({ children }) => <li className="special-list-item">{children}</li>,
-                    someCustomType: DynamicComponent
-                  }}
-                  className=""
-                />
+            {description ? (
+              <div className="texts gr-pr-xl-13">
+                <span className="d-block text-uppercase gr-text-12 font-weight-bold gr-pb-6 gr-heading-color-opacity">
+                  Description
+                </span>
+                <div className="gr-text-9 gr-text-color-opacity">
+                  <PortableText
+                    content={description}
+                    serializers={{
+                      h1: (props) => <h1 style={{ color: 'red' }} {...props} />,
+                      li: ({ children }) => <li className="special-list-item">{children}</li>,
+                      someCustomType: DynamicComponent
+                    }}
+                    className=""
+                  />
+                </div>
               </div>
-            </div>
+            ) : null}
             <div className="row gr-pt-12">
               <div className="col-sm-6 col-md-3 gr-pb-7">
                 <div>
