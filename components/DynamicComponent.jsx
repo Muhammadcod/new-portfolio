@@ -79,13 +79,15 @@ const DynamicComponent = ({ project = {} }) => {
                   <span className="d-block gr-text-12 font-weight-bold text-uppercase gr-pb-3 gr-heading-color-opacity">
                     Tech Stack
                   </span>
-                  <div className="d-flex ">
-                    {technology.map((tech) => (
-                      <h3 key={tech} className="h3 mr-3">
-                        {tech}
-                      </h3>
-                    ))}
-                  </div>
+                  {technology.length > 0 ? (
+                    <div className="d-flex ">
+                      {technology.map((tech) => (
+                        <h3 key={tech} className="h3 mr-3">
+                          {tech}
+                        </h3>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
