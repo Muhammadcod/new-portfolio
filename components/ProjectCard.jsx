@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import ExternalLink from './ExternalLink';
-import { urlFor } from '../lib/sanity';
+import {urlFor} from '../lib/sanity';
 import Link from 'next/link';
 import classnames from 'classnames';
 
-const ProjectCard = ({ variants, item, i }) => {
-  const { name, technology, shorts, image } = item;
+const ProjectCard = ({variants, item, i}) => {
+  const {name, technology, shorts, image} = item;
   const colors = [
     {
       b: `#FFF7F0`,
@@ -40,7 +40,8 @@ const ProjectCard = ({ variants, item, i }) => {
         variants={variants}
         className={classnames('col-12 col-md-6', {
           'mt-lg-5': i === 1
-        })}>
+        })}
+      >
         <div
           className="p-3"
           style={{
@@ -48,14 +49,15 @@ const ProjectCard = ({ variants, item, i }) => {
             border: `1px solid #EAECF0`,
             background: colors[i]?.b
           }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             alt=""
             className="w-100"
             src={urlFor(image).url()}
-            style={{ borderRadius: `20px` }}
+            style={{borderRadius: `20px`}}
           />
           <div className="d-flex justify-content-between align-items-start mt-3">
-            <h4 className="project-title" style={{ color: colors[i]?.t }}>
+            <h4 className="project-title" style={{color: colors[i]?.t}}>
               {name}
             </h4>
           </div>
@@ -69,12 +71,12 @@ const ProjectCard = ({ variants, item, i }) => {
           <div className="d-flex justify-content-between align-items-end">
             <div className="d-flex flex-wrap mt-3 project-tech-list">
               {technology.length
-                ? technology.map((tech) => <div className="me-2 list">{tech}</div>)
+                ? technology.map((tech) => <div key={tech} className="me-2 list">{tech}</div>)
                 : null}
             </div>
             <div>
               <Link href={`/project/${item.slug.current}`} className="gr-heading-color">
-                <ExternalLink />
+                <ExternalLink/>
               </Link>
             </div>
           </div>

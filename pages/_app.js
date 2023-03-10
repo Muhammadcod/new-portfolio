@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styles/globals.css';
 import classnames from "classnames";
-import {Poppins} from '@next/font/google'
+import {Poppins} from 'next/font/google'
 
 
 const roboto = Poppins({
