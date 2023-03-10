@@ -1,14 +1,15 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import PortableText from 'react-portable-text';
-import {urlFor} from '../lib/sanity';
+import { urlFor } from '../lib/sanity';
 
-const DynamicComponent = ({project = {}}) => {
-  const {demo, image, name, dateCreated, technology, description, story} = project;
+const DynamicComponent = ({ project = {} }) => {
+  console.log(project);
+  const { demo, image, name, dateCreated, technology, description, story } = project;
   return (
     <>
       <motion.main
-        initial={{opacity: 0}}
-        whileInView={{opacity: 1}}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         className="container pt-5 ">
         <section className="container-fluid gr-pl-lg-10 gr-pr-lg-10">
           <span className="d-block text-uppercase gr-text-12 font-weight-bold gr-pb-6 gr-heading-color-opacity">
@@ -20,7 +21,7 @@ const DynamicComponent = ({project = {}}) => {
         <section className="banner-block mb-5">
           <div className="container-fluid gr-pl-lg-10 gr-pr-lg-10">
             <div className="protfolio-image">
-              <img src={urlFor(image).url()} alt="" className="w-100"/>
+              {image && <img src={urlFor(image).url()} alt="" className="w-100" />}
             </div>
           </div>
         </section>
@@ -35,8 +36,8 @@ const DynamicComponent = ({project = {}}) => {
                 <PortableText
                   content={description}
                   serializers={{
-                    h1: (props) => <h1 style={{color: 'red'}} {...props} />,
-                    li: ({children}) => <li className="special-list-item">{children}</li>,
+                    h1: (props) => <h1 style={{ color: 'red' }} {...props} />,
+                    li: ({ children }) => <li className="special-list-item">{children}</li>,
                     someCustomType: DynamicComponent
                   }}
                   className=""
@@ -66,7 +67,7 @@ const DynamicComponent = ({project = {}}) => {
                     href={demo}
                     target="_blank"
                     className="btn btn-primary rounded-pill with-icon btn-hover-translate btn-hover-shadow-down">
-                    Live work <i className="icon icon-tail-right"/>
+                    Live work <i className="icon icon-tail-right" />
                   </a>
                 </div>
               </div>
@@ -80,7 +81,9 @@ const DynamicComponent = ({project = {}}) => {
                   </span>
                   <div className="d-flex ">
                     {technology.map((tech) => (
-                      <h3 key={tech} className="h3 mr-3">{tech}</h3>
+                      <h3 key={tech} className="h3 mr-3">
+                        {tech}
+                      </h3>
                     ))}
                   </div>
                 </div>
@@ -94,8 +97,8 @@ const DynamicComponent = ({project = {}}) => {
                   <PortableText
                     content={story}
                     serializers={{
-                      h1: (props) => <h1 style={{color: 'red'}} {...props} />,
-                      li: ({children}) => <li className="special-list-item">{children}</li>,
+                      h1: (props) => <h1 style={{ color: 'red' }} {...props} />,
+                      li: ({ children }) => <li className="special-list-item">{children}</li>,
                       someCustomType: DynamicComponent
                     }}
                     className=""
