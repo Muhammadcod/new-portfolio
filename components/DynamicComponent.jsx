@@ -4,7 +4,7 @@ import { urlFor } from '../lib/sanity';
 
 const DynamicComponent = ({ project = {} }) => {
   console.log(project);
-  const { demo, image, name, dateCreated, technology, description, story } = project;
+  const { demo, image, name, dateCreated, technology = [], description, story } = project;
   return (
     <>
       <motion.main
@@ -79,9 +79,9 @@ const DynamicComponent = ({ project = {} }) => {
                   <span className="d-block gr-text-12 font-weight-bold text-uppercase gr-pb-3 gr-heading-color-opacity">
                     Tech Stack
                   </span>
-                  {technology.length > 0 ? (
+                  {technology?.length > 0 ? (
                     <div className="d-flex ">
-                      {technology.map((tech) => (
+                      {technology?.map((tech) => (
                         <h3 key={tech} className="h3 mr-3">
                           {tech}
                         </h3>
