@@ -23,7 +23,7 @@ const item = {
 
 const ProjectsContainer = ({ projects }) => {
   return (
-    <div className="px-5 pt-5">
+    <div className="px-2 px-lg-5" style={{ marginTop: `120px` }}>
       <motion.div
         variants={container}
         initial="hidden"

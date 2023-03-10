@@ -148,7 +148,7 @@ body {
     padding: 0;
     margin: 0;
     /*overflow: auto;*/
-    /*background-color: #171a23;*/
+    /*background-color: #fff;*/
     /*color: #fff;*/
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -12051,6 +12051,168 @@ button {
 .filter-switch-item input:not(:checked) + label {
     --bg-opacity: 0;
     box-shadow: none;
+}
+
+
+.project-title {
+    font-size: clamp(20px, 5vw, 26px);
+}
+
+.project-description {
+    font-size: 16px
+}
+
+.project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.project-tech-list .list {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.sidebar-social {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-social ul li {
+    list-style-type: none;
+}
+
+.sidebar-main {
+    min-height: 100vh;
+}
+
+.sidebar-main .main-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    font-size: 16px;
+}
+
+.sidebar-main .title-header {
+    margin: 120px 0 0;
+}
+
+.sidebar-main .title-header p {
+    font-weight: 400;
+    line-height: 48px;
+    font-style: normal;
+    font-size: clamp(1.25rem, 6vw, 2.25rem);
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+.about, .stack {
+    color: #9AA4B2;
+    background: #1E1E1E;
+}
+
+
+.stack {
+    min-height: 100vh;
+}
+
+.about-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.header-btn {
+    display: flex;
+    /*flex-direction: row;*/
+    align-items: flex-start;
+    padding: 6px 11px;
+    gap: 11px;
+    /*width: 98px;*/
+    height: 29px;
+    background: #F7EDE5;
+    border-radius: 106px;
+}
+
+.header-btn span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #303030;
+    mix-blend-mode: color-burn;
+}
+
+.header-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    color: #FCFCFD;
+}
+
+.stack-list ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #9AA4B2;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.link-dark {
+    color: #303030;
+}
+
+a.link-grey {
+    color: #9AA4B2;
+}
+
+/*a:visited {*/
+/*    text-decoration: none;*/
+/*    color: #303030;*/
+
+/*}*/
+
+/*a:hover {*/
+/*    text-decoration: none;*/
+/*}*/
+
+.active {
+    color: #303030;
+}
+
+.active.active-dark:active {
+    color: #303030;
+}
+
+.active.active-grey:active {
+    color: #FCFCFD;
+}
+
+.soon-text {
+    font-size: 12px;
+    top: -10px;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

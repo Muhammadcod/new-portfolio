@@ -1,12 +1,8 @@
-import { useRef } from 'react';
-import Script from 'next/script';
-import { useInView } from 'framer-motion';
-import { sanityClient } from '../lib/sanity';
-import { selectItem } from '../utils';
 import ProjectsContainer from '../components/ProjectsContainer';
+import { sanityClient } from '../lib/sanity';
+import Script from 'next/script';
 import Layout from '../components/Layout';
-import AboutMe from '../components/AboutMe';
-import TechStack from '../components/TechStack';
+import { selectItem } from '../utils';
 
 const projectsQuery = `*[_type == 'project']{
   _id,
@@ -33,10 +29,6 @@ const keys = [
 
 export default function Index({ projects }) {
   const filteredProject = selectItem(projects, keys);
-  const ref = useRef(null);
-  const stackRef = useRef(null);
-  const isInView = useInView(ref || stackRef);
-
   return (
     <>
       <Script
@@ -44,12 +36,8 @@ export default function Index({ projects }) {
         strategy="lazyOnload"
         onLoad={() => console.log(`script loaded correctly, masonry has been populated`)}
       />
-      <Layout animateLayout={isInView}>
+      <Layout>
         <ProjectsContainer projects={filteredProject} />
-        <section ref={ref}>
-          <AboutMe />
-          <TechStack />
-        </section>
       </Layout>
     </>
   );

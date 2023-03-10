@@ -64,6 +64,7 @@ const DynamicComponent = ({ project }) => {
                 <div>
                   <a
                     href={demo}
+                    target="_blank"
                     className="btn btn-primary rounded-pill with-icon btn-hover-translate btn-hover-shadow-down">
                     Live work <i className="icon icon-tail-right" />
                   </a>
