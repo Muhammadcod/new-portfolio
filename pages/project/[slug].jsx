@@ -22,7 +22,7 @@ const projectQuery = groq`*[_type == 'project' && slug.current == $slug][0] {
 }`;
 
 export default function OnePage({data, preview}) {
-  const {project} = data;
+  const {project} = data ?? {};
 
   return preview ? (
     <PreviewSuspense fallback="Loading...">

@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 import PortableText from 'react-portable-text';
 import {urlFor} from '../lib/sanity';
 
-const DynamicComponent = ({project}) => {
+const DynamicComponent = ({project = {}}) => {
   const {demo, image, name, dateCreated, technology, description, story} = project;
   return (
     <>
