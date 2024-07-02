@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';
 import classnames from 'classnames';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const ActiveLink = ({ to, children }) => {
   const location = useRouter();

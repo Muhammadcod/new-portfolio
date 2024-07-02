@@ -1,6 +1,8 @@
+'use client';
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 import { Fragment } from 'react';
+import { selectItem } from '../utils';
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -22,7 +24,17 @@ const item = {
   }
 };
 
+const keys = [
+  'Would You Rather',
+  'Fiqpay Payment Wizard',
+  'Admin Dashboard',
+  'Image Gallery',
+  'Openess Emoji',
+  'My Reads App'
+];
+
 const ProjectsContainer = ({ projects = [] }) => {
+  projects = selectItem(projects, keys);
   return (
     <>
       {projects.length > 0 ? (

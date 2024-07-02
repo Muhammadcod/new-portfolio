@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import Script from 'next/script';
 import { useInView } from 'framer-motion';
-import { sanityClient } from '../lib/sanity';
-import { selectItem } from '../utils';
-import ProjectsContainer from '../components/ProjectsContainer';
-import Layout from '../components/Layout';
-import AboutMe from '../components/AboutMe';
-import TechStack from '../components/TechStack';
+import { sanityClient } from '../../lib/sanity';
+import { selectItem } from '../../utils';
+import ProjectsContainer from '../../components/ProjectsContainer';
+import Layout from '../../components/Layout';
+import AboutMe from '../../components/AboutMe';
+import TechStack from '../../components/TechStack';
 
 const projectsQuery = `*[_type == 'project']{
   _id,
@@ -31,7 +31,7 @@ const keys = [
   'My Reads App'
 ];
 
-export default function Index({ projects }) {
+export default function Indexgdgdgh({ projects }) {
   const filteredProject = selectItem(projects, keys);
   const ref = useRef(null);
   const stackRef = useRef(null);
